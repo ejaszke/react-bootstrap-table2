@@ -1,16 +1,21 @@
-import * as path from 'path';
-import umdConfig from './webpack.umd.babel';
+import path from 'path';
+import umdConfig from '../webpack.umd.babel.js';
 
-module.exports = {
+export default {
   ...umdConfig,
   entry: {
     'react-bootstrap-table2-overlay/dist/react-bootstrap-table2-overlay': './packages/react-bootstrap-table2-overlay/index.js',
     'react-bootstrap-table2-overlay/dist/react-bootstrap-table2-overlay.min': './packages/react-bootstrap-table2-overlay/index.js'
   },
   output: {
-    path: path.join(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages'),
     filename: '[name].js',
-    library: 'ReactBootstrapTable2Overlay',
-    libraryTarget: 'umd'
+    library: {
+      name: 'ReactBootstrapTable2Overlay',
+      type: 'umd'
+    },
+    globalObject: 'this',
+    umdNamedDefine: true,
+    clean: true
   }
 };

@@ -1,45 +1,50 @@
 import webpack from 'webpack';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
-module.exports = {
+export default {
+  mode: 'production',
   devtool: 'source-map',
-  externals: [{
-    'react': {
+
+  externals: {
+    react: {
       root: 'React',
-      commonjs2: 'react',
       commonjs: 'react',
+      commonjs2: 'react',
       amd: 'react'
-    }
-  }, {
+    },
     'react-dom': {
       root: 'ReactDOM',
-      commonjs2: 'react-dom',
       commonjs: 'react-dom',
+      commonjs2: 'react-dom',
       amd: 'react-dom'
     }
-  }],
-  module: {
-    rules: [{
-      enforce: 'pre',
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      loader: 'eslint-loader'
-    }, {
-      test: /\.js?$/,
-      use: ['babel-loader'],
-      exclude: /node_modules/
-    }]
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      }
+    ]
+  },
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new webpack.SourceMapDevToolPlugin(),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
-      compress: { warnings: false }
-    })
-  ]
+
+    // new ESLintPlugin({
+    //   extensions: ['js'],
+    //   exclude: 'node_modules'
+    // })
+  ],
+
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };

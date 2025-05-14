@@ -1,16 +1,23 @@
-import * as path from 'path';
-import umdConfig from './webpack.umd.babel';
+import path from 'path';
+import umdConfig from './webpack.umd.babel.js';
 
-module.exports = {
+export default {
   ...umdConfig,
+
   entry: {
-    'react-bootstrap-table2/dist/react-bootstrap-table-next': './packages/react-bootstrap-table2/index.js',
-    'react-bootstrap-table2/dist/react-bootstrap-table-next.min': './packages/react-bootstrap-table2/index.js'
+    'react-bootstrap-table-next': './packages/react-bootstrap-table2/index.js',
+    'react-bootstrap-table-next.min': './packages/react-bootstrap-table2/index.js'
   },
+
   output: {
-    path: path.join(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages/react-bootstrap-table2/dist'),
     filename: '[name].js',
-    library: 'ReactBootstrapTable2',
-    libraryTarget: 'umd'
+    library: {
+      name: 'ReactBootstrapTable2',
+      type: 'umd'
+    },
+    globalObject: 'this',
+    umdNamedDefine: true,
+    clean: true
   }
 };

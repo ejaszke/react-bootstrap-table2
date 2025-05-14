@@ -1,16 +1,21 @@
-import * as path from 'path';
-import umdConfig from './webpack.umd.babel';
+const path = require('path');
+const umdBase = require('../webpack.umd.babel.js');
 
 module.exports = {
-  ...umdConfig,
+  ...umdBase,
   entry: {
     'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator': './packages/react-bootstrap-table2-paginator/index.js',
     'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min': './packages/react-bootstrap-table2-paginator/index.js'
   },
   output: {
-    path: path.join(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages'),
     filename: '[name].js',
-    library: 'ReactBootstrapTable2Paginator',
-    libraryTarget: 'umd'
+    library: {
+      name: 'ReactBootstrapTable2Paginator',
+      type: 'umd'
+    },
+    globalObject: 'this',
+    umdNamedDefine: true,
+    clean: true
   }
 };
