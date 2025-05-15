@@ -1,5 +1,5 @@
 {
-  "name": "@ed/react-bootstrap-table-next",
+  "name": "@ejaszke/react-bootstrap-table-next",
   "version": "5.0.4-alpha.0",
   "description": "Next generation of react-bootstrap-table",
   "main": "./lib/index.js",
@@ -50,5 +50,5 @@
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
-  "gitHead": "938dde4de7f6158eaf03c7b2a58e4f4026c1383d"
+  "gitHead": "b606234cb5e4160946d3e0ddaceaf47865d1cbfb"
 }
