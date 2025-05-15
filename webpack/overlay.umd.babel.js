@@ -1,5 +1,5 @@
 import path from 'path';
-import umdConfig from '../webpack.umd.babel.js';
+import umdConfig from './webpack.umd.babel.js';
 
 export default {
   ...umdConfig,
@@ -8,7 +8,7 @@ export default {
     'react-bootstrap-table2-overlay/dist/react-bootstrap-table2-overlay.min': './packages/react-bootstrap-table2-overlay/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages/react-bootstrap-table2-overlay/dist'),
     filename: '[name].js',
     library: {
       name: 'ReactBootstrapTable2Overlay',

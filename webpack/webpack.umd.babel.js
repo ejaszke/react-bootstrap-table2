@@ -1,7 +1,7 @@
-import webpack from 'webpack';
-import ESLintPlugin from 'eslint-webpack-plugin';
+const webpack = require('webpack');
+// const ESLintPlugin = require('eslint-webpack-plugin'); // jeśli używasz
 
-export default {
+module.exports = {
   mode: 'production',
   devtool: 'source-map',
 
@@ -33,12 +33,7 @@ export default {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-
-    // new ESLintPlugin({
-    //   extensions: ['js'],
-    //   exclude: 'node_modules'
-    // })
+    })
   ],
 
   optimization: {

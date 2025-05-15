@@ -1,6 +1,6 @@
 {
-  "name": "react-bootstrap-table2-paginator",
-  "version": "2.1.2",
+  "name": "@ejaszke/react-bootstrap-table2-paginator",
+  "version": "5.0.5-alpha.0",
   "description": "it's the pagination addon for react-bootstrap-table2",
   "main": "./lib/index.js",
   "repository": {

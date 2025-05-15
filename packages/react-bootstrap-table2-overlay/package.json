@@ -1,6 +1,6 @@
 {
-  "name": "react-bootstrap-table2-overlay",
-  "version": "2.0.0",
+  "name": "@ejaszke/react-bootstrap-table2-overlay",
+  "version": "5.0.5-alpha.0",
   "description": "it's a loading overlay addons for react-bootstrap-table2",
   "main": "./lib/index.js",
   "repository": {

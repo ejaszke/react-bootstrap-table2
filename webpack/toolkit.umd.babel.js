@@ -1,5 +1,5 @@
 const path = require('path');
-const umdBase = require('../webpack.umd.babel.js');
+const umdBase = require('./webpack.umd.babel.js');
 
 module.exports = {
   ...umdBase,
@@ -10,7 +10,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages/react-bootstrap-table2-toolkit/dist'),
     filename: '[name].js',
     library: {
       name: 'ReactBootstrapTable2Toolkit',

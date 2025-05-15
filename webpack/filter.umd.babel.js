@@ -1,5 +1,5 @@
 import path from 'path';
-import umdConfig from '../webpack.umd.babel';
+import umdConfig from './webpack.umd.babel';
 
 export default {
   ...umdConfig,
@@ -8,7 +8,7 @@ export default {
     'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min': './packages/react-bootstrap-table2-filter/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages/react-bootstrap-table2-filter/dist'),
     filename: '[name].js',
     library: {
       name: 'ReactBootstrapTable2Filter',

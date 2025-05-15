@@ -1,5 +1,5 @@
 const path = require('path');
-const umdBase = require('../webpack.umd.babel.js');
+const umdBase = require('./webpack.umd.babel.js');
 
 module.exports = {
   ...umdBase,
@@ -8,7 +8,7 @@ module.exports = {
     'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min': './packages/react-bootstrap-table2-paginator/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '../packages'),
+    path: path.resolve(__dirname, '../packages/react-bootstrap-table2-paginator/dist'),
     filename: '[name].js',
     library: {
       name: 'ReactBootstrapTable2Paginator',
