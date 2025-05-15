@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/react-bootstrap-table/react-bootstrap-table2.git"
   },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -46,5 +50,6 @@
   },
   "dependencies": {
     "file-saver": "2.0.2"
-  }
+  },
+  "gitHead": "3234551ee44687870d5968cb8c02f1740d6a5a3e"
 }

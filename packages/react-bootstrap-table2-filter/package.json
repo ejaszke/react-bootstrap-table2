@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/react-bootstrap-table/react-bootstrap-table2.git"
   },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "keywords": [
     "react",
@@ -40,5 +44,6 @@
     "prop-types": "15.8.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
-  }
+  },
+  "gitHead": "3234551ee44687870d5968cb8c02f1740d6a5a3e"
 }
