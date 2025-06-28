@@ -47,8 +47,8 @@
   "peerDependencies": {
     "classnames": "2.5.1",
     "prop-types": "15.8.1",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
   },
   "gitHead": "b606234cb5e4160946d3e0ddaceaf47865d1cbfb"
 }
